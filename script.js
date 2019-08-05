@@ -24,7 +24,7 @@ $(function () {
     let monBill = "";
     let totalBilled = "";
 
-    $(".addEmployee").submit(function (event) {
+    $("#addEmployee").submit(function (event) {
         event.preventDefault();
 
         employee = $("#employeeName").val().trim();
