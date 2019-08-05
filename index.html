@@ -15,9 +15,49 @@
 
 <body>
     <div class="container">
-        <div class="jumbotron text-center">
-            <h1>Employee Data Management</h1>
-            <h3>A Comprehensive Directory of Employee Billable Hours</h3>
+        <div class="row">
+            <div class="jumbotron text-center">
+                <h1>Employee Data Management</h1>
+                <h3>A Comprehensive Directory of Employee Billable Hours</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Current Employees</h3>
+                </div>
+                <div class="panel-footer">
+                    <table class="table table-bordered ">
+                        <tr>
+                            <th scope="col">Employee Name</th>
+                            <th scope="col">Role</th>
+                            <th scope="col">Start Date</th>
+                            <th scope="col">Months Worked</th>
+                            <th scope="col">Monthly Rate ($)</th>
+                            <th scope="col">Total Billed ($)</th>
+                        </tr>
+                        <tbody id="MrT">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <form class="form">
+                        <label for="employeeName">Employee Name</label>
+                        <input type="text" class="employeeName">
+                        <label for="role">Role</label>
+                        <input type="text" class="role">
+                        <label for="startDate">Start Date</label>
+                        <input type="date" class="startDate">
+                        <label for="monthlyrate">Monthly Rate</label>
+                        <input type="number" class="monthlyrate">
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 
