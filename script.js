@@ -19,10 +19,10 @@ $(function () {
     // Initial Values
     let employee = "";
     let role = "";
-    let startDate = "";
-    let monWorked = "";
-    let monBill = "";
-    let totalBilled = "";
+    let startDate = 0;
+    let monWorked = 0;
+    let monBill = 0;
+    let totalBilled = 0;
 
     $("#addEmployee").submit(function (event) {
         event.preventDefault();
