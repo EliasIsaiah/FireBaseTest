@@ -28,11 +28,11 @@ $(function () {
         event.preventDefault();
 
         employee = $("#employeeName").val().trim();
-        role = $("role").val().trim();
-        startDate = $("startDate").val().trim();
-        monWorked = $("monthsWorked").val().trim();
-        monBill = $("monthlyRate").val().trim();
-        totalBilled = $("totalBilled").val().trim();
+        role = $("#role").val().trim();
+        startDate = $("#startDate").val().trim();
+        monWorked = $("#monthsWorked").val().trim();
+        monBill = $("#monthlyRate").val().trim();
+        totalBilled = $("#totalBilled").val().trim();
 
         database.ref().push({
             employee: employee,
