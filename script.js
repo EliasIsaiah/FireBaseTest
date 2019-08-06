@@ -24,8 +24,9 @@ $(function () {
     let monBill = 0;
     let totalBilled = 0;
 
-    $("#addEmployee").submit(function (event) {
+    $("#addEmployeeForm").submit(function (event) {
         event.preventDefault();
+        console.log("submitted!");
 
         employee = $("#employeeInput").val().trim();
         role = $("#roleInput").val().trim();
@@ -52,13 +53,13 @@ $(function () {
         console.log(snapshot.val());
         console.log(snapshot.val().employee);
         console.log(snapshot.val().role);
-        console.log(snapshot.val().startDate);
-        console.log(snapshot.val().monWorked);
-        console.log(snapshot.val().monBill);
-        console.log(snapshot.val().totalBilled);
+        // console.log(snapshot.val().startDate);
+        // console.log(snapshot.val().monWorked);
+        // console.log(snapshot.val().monBill);
+        // console.log(snapshot.val().totalBilled);
 
         // Change the HTML to reflect
-        $("#name-display").text(snapshot.val().name);
+        // $("#name-display").text(snapshot.val().name);
 
 
 
