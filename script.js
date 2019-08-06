@@ -31,9 +31,13 @@ $(function () {
         employee = $("#employeeInput").val().trim();
         role = $("#roleInput").val().trim();
         startDate = $("#startDateInput").val().trim();
-        // monWorked = $("#monthsWorked").val().trim();
+        monWorked = moment(startDate).diff(moment(), "months") * -1;
+        console.log(monWorked);
         monBill = $("#monthlyRateInput").val().trim();
-        // totalBilled = $("#totalBilled").val().trim();
+        totalBilled = monWorked * monBill;
+        console.log(totalBilled);
+
+
 
         database.ref().push({
             employee: employee,
@@ -43,11 +47,33 @@ $(function () {
             monBill: monBill,
             totalBilled: totalBilled
         });
+
         $("#addEmployeeForm")[0].reset();
+
 
     });
     // Firebase watcher + initial loader HINT: .on("value")
-    database.ref().on("value", function (snapshot) {
+    database.ref().on("child_added", function (snapshot) {
+
+        let newTr = $("<tr>");
+        let newName = $("<td>");
+        let newRole = $("<td>");
+        let newStart = $("<td>");
+        let newMonWorked = $("<td>");
+        let newMonRate = $("<td>");
+        let newTotalBilled = $("<td>");
+        let MrT = $("#MrT");
+
+        newName.text(snapshot.val().employee);
+        newRole.text(snapshot.val().role);
+        newStart.text(snapshot.val().startDate);
+        newMonWorked.text(snapshot.val().monWorked);
+        newMonRate.text(snapshot.val().monBill);
+        newTotalBilled.text(snapshot.val().totalBilled);
+
+        newTr.append(newName, newRole, newStart, newMonWorked, newMonRate, newTotalBilled);
+        MrT.append(newTr);
+
 
         // Log everything that's coming out of snapshot
         console.log(snapshot.val());
