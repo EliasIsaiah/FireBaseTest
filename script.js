@@ -43,7 +43,7 @@ $(function () {
             monBill: monBill,
             totalBilled: totalBilled
         });
-
+        $("#addEmployeeForm").empty();
 
     });
     // Firebase watcher + initial loader HINT: .on("value")
