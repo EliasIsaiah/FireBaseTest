@@ -4,13 +4,13 @@ $(function () {
 
     // Your web app's Firebase configuration
     let config = {
-        apiKey: "AIzaSyCjlTNJo1copvkQ-qSuzLayk5VApwHIGYs",
-        authDomain: "operationcaffeine.firebaseapp.com",
-        databaseURL: "https://operationcaffeine.firebaseio.com",
-        projectId: "operationcaffeine",
-        // storageBucket: "",
-        messagingSenderId: "714734586576",
-        appId: "1:714734586576:web:1c6bf78a7f05551a"
+        apiKey: "AIzaSyA3PjGaY7DmgWoCVUqmALb0smnWARF7oHU",
+        authDomain: "totally-original-projectname.firebaseapp.com",
+        databaseURL: "https://totally-original-projectname.firebaseio.com",
+        projectId: "totally-original-projectname",
+        storageBucket: "totally-original-projectname.appspot.com",
+        messagingSenderId: "289352078248",
+        appId: "1:289352078248:web:c38ef51abecf8464"
     };
     // Initialize Firebase
     firebase.initializeApp(config);
@@ -33,6 +33,8 @@ $(function () {
         monWorked = $("#monthsWorked").val().trim();
         monBill = $("#monthlyRate").val().trim();
         totalBilled = $("#totalBilled").val().trim();
+
+
 
         database.ref().push({
             employee: employee,
