@@ -27,12 +27,12 @@ $(function () {
     $("#addEmployee").submit(function (event) {
         event.preventDefault();
 
-        employee = $("#employeeName").val().trim();
-        role = $("#role").val().trim();
-        startDate = $("#startDate").val().trim();
-        monWorked = $("#monthsWorked").val().trim();
-        monBill = $("#monthlyRate").val().trim();
-        totalBilled = $("#totalBilled").val().trim();
+        employee = $("#employeeInput").val().trim();
+        role = $("#roleInput").val().trim();
+        startDate = $("#startDateInput").val().trim();
+        // monWorked = $("#monthsWorked").val().trim();
+        monBill = $("#monthlyRateInput").val().trim();
+        // totalBilled = $("#totalBilled").val().trim();
 
         database.ref().push({
             employee: employee,
